@@ -1,0 +1,252 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*##########################################################*/
+/*-----------------Generales----------------------*/
+/*##########################################################*/
+@font-face {
+    font-family: espacial;
+    src: url(../fonts/aspace_demo.otf);
+}
+html, body {
+    height:100%;
+}
+html {
+    background: url(../img/universo.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+
+/*##########################################################*/
+/*-----------------Barra de navegación----------------------*/
+/*##########################################################*/
+.menu-bar {
+    display: none;
+    z-index: 1000;
+
+}
+header {
+    width: 100%;
+}
+
+header nav {
+    z-index: 1000;
+    max-width: 1000px;
+    width: 40%;
+    /*background-color: red;*/
+    /*margin: 20px auto;*/
+    /*margin-top: 10px;*/
+    border: 1px solid #fff;
+    border-radius: 0px 8px 8px 0px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li {
+    /*display: inline-block;*/
+    border-bottom: 1px solid #fff;
+}
+header nav ul li:hover {
+    background-color: red;
+
+}
+.inicio:hover {
+    border-radius: 0px 8px 0px 0px;
+}
+.final:hover {
+    border-radius: 0px 0px 8px 0px;
+}
+    
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #fff;
+    font-family: espacial;
+    font-size: 0.8em;
+}
+
+
+/*##########################################################*/
+/*-----------------Contenido----------------------*/
+/*##########################################################*/
+
+
+.intro {
+    display: flex;
+    height: 570px;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid green;*/
+    overflow: hidden;
+}
+#cabecera {
+    background-color: black;
+    color: #fff;
+    opacity: 0.8;
+    text-align: center;
+    padding: 10px;
+    width: 75%;
+    height: auto;
+    
+
+}
+
+h1 {
+    font-family: espacial;
+}
+   
+.estelar {
+    color: #fff;
+    /*opacity: 0.8;*/
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+}
+.estelar img {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.estelar h1 {
+    margin-bottom: 10px;
+}
+/*##########################################################*/
+/*-----------------Nave espacial----------------------*/
+/*##########################################################*/
+#nave {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    
+    top: 100px;
+    margin: auto;
+
+}
+
+#animacion {
+    position: absolute;
+   
+    -webkit-transform-origin: 0% 0%; 
+    -webkit-animation: example 3s infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-in-out;
+
+    animation: example 3s infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+    @-webkit-keyframes example {
+
+        0%   {top:0px;}
+        50%  {top:7px;}
+        100%  {top:0px;}
+    }
+
+    /* Standard syntax */
+    @keyframes example {
+        0%   {top:0px;}
+        50%  {top:7px;}
+        100%  {top:0px;}
+       
+    }
+  
+footer {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}     
+
+/*##########################################################*/
+/*-----------------Media queries----------------------*/
+/*##########################################################*/
+@media screen and (max-width: 576px) {
+    .menu-bar {
+        display: block;
+        width: auto;
+        position: fixed;
+        right: 0px;
+        top: 0;
+        
+
+    }
+
+    .btn-menu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
+    .btn-menu span {
+        float: right;
+    }
+
+    header nav {
+        background-color: black;
+        opacity: 0.7;
+        position: fixed;
+        right: 100%;
+       
+        margin-top: 50px;
+
+    }
+
+
+}
+
+@media screen and (min-width: 577px){
+    header nav {
+    margin-top: 100px;
+    width: 180px;
+    position: fixed;
+    }
+    header nav li {
+        padding-left: 15px;
+    }
+    #nave {
+        top: 180px;
+    }
+    #cabecer {
+        width: 50%;
+    }
+    .intro {
+       height: 700px;
+    }
+    .estelar img {
+        width: 40%;
+    }
+    .estelar img[alt="Saturno"] { 
+        width: 65%;
+    }
+
+    .info {
+        width: 50%;
+        align-self: center;
+    }
+}
+
